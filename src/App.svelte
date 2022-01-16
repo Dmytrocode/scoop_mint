@@ -16,13 +16,15 @@
 
   /***********************************/
   // Customise the app by changing the following variables.
-  const TITLE = "Shapes";
-  const DESCRTIPTION = "A collection of shapes on the blockchain";
-  const HEADER_TITLE = "shapes.xyz";
-  const HEADER_LINK = "https://lanablocks.xyz";
+  const TITLE = "SolScoops";
+  const DESCRTIPTION = "Mint 1 of the 800 Unique SolScoops!";
+  let HEADER_TITLE = "./public/logo.png";
+  let CONES = "./public/backg2.png";
+  const HEADER_LINK = "solscoops.com";
   // Your image or GIF needs to be in the /public folder for this to work
-  const IMAGE_LINK = "/example.gif";
+  const IMAGE_LINK = "/scoops.gif";
   /***********************************/
+
 
   const { solana } = window as any;
   const rpcUrl = import.meta.env.VITE_APP_SOLANA_RPC_HOST?.toString();
@@ -111,24 +113,27 @@
   <!-- Error section -->
   {#if errorOcurred}
     <div class=" h-full flex">
+     
       <div class="m-auto">
         An error occurred. Please check if your environment variables have been
         populated correctly and redeploy the applcation.
       </div>
     </div>
+  
     <!-- Loading Section -->
   {:else if siteLoading && !errorOcurred}
     <div class=" h-full flex">
       <div class="lds-hourglass m-auto" />
     </div>
   {:else}
+
+
+    
     <!-- Menu Bar -->
     {#if HEADER_TITLE}
-      <a
-        href={HEADER_LINK}
-        class="text-black tracking-widest underline underline-offset-4 decoration-2 font-mono"
-        >{HEADER_TITLE}</a
-      >
+    <div class="head">
+      <img src={HEADER_TITLE} alt="logo" class="logoheader"/>
+    </div>
     {/if}
     <!-- Card -->
     <div
@@ -147,13 +152,18 @@
         >
           {TITLE}
         </div>
-        <div class="text-sm sm:text-md font-semibold pb-5 text-gray-600 ">
+        <div class="text-sm sm:text-md font-semibold pb-5 text-blue-600 ">
           {DESCRTIPTION}
         </div>
-        <Button {solana} {connection} />
-
+        
+<!-- <Button {solana} {connection} />-->
+        <div class="time">
+          <p >January 16  |  20:00 UTC</p>
+        </div>
         <div class=" tracking-widest font-bold text-sm pt-3 text-gray-400">
-          {itemsRedeemed}/{itemsAvailable} claimed
+          <!-- {itemsRedeemed}-->
+
+          0/{itemsAvailable} claimed
         </div>
         <div class="flex flex-col pt-3">
           {#if $userState.solanaExplorerLink}
