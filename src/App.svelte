@@ -15,7 +15,7 @@
   } from "./lib/state-helpers";
 
   /***********************************/
-  // Customise the app by changing the following variables.
+  // Customise the app by changing the following variables. TEST
   const TITLE = "SolScoops";
   const DESCRTIPTION = "Mint 1 of the 800 Unique SolScoops!";
   let HEADER_TITLE = "/logo.png";
