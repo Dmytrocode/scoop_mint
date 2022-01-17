@@ -18,8 +18,8 @@
   // Customise the app by changing the following variables.
   const TITLE = "SolScoops";
   const DESCRTIPTION = "Mint 1 of the 800 Unique SolScoops!";
-  let HEADER_TITLE = "./public/logo.png";
-  let CONES = "./public/backg2.png";
+  let HEADER_TITLE = "/logo.png";
+  
   const HEADER_LINK = "solscoops.com";
   // Your image or GIF needs to be in the /public folder for this to work
   const IMAGE_LINK = "/scoops.gif";
@@ -110,6 +110,7 @@
 </script>
 
 <main class="h-screen">
+  
   <!-- Error section -->
   {#if errorOcurred}
     <div class=" h-full flex">
@@ -136,17 +137,18 @@
     </div>
     {/if}
     <!-- Card -->
+    
     <div
-      class=" max-w-lg mx-auto bg-white rounded-lg my-12  border-2"
-      transition:fade
-    >
+      class="max-w-lg mx-auto rounded-lg my-12  border-2"
+      transition:fade style="background-color: BlanchedAlmond; border-radius: 15px">
+
       <!-- Top Bar -->
       <Header />
       <hr />
       <br />
       <!-- Main Body -->
       <div class="p-6">
-        <img src={IMAGE_LINK} alt="" class=" w-1/2 mx-auto m-5" />
+        <img src={IMAGE_LINK} alt="" class=" w-1/2 mx-auto m-2" style="border-radius: 15px;"/>
         <div
           class=" text-lg sm:text-2xl font-mono font-bold py-5 tracking-wider"
         >
@@ -158,12 +160,12 @@
         
 <!-- <Button {solana} {connection} />-->
         <div class="time">
-          <p >January 16  |  20:00 UTC</p>
+          <p style="color: white;">January 16  |  20:00 UTC</p>
         </div>
         <div class=" tracking-widest font-bold text-sm pt-3 text-gray-400">
           <!-- {itemsRedeemed}-->
 
-          0/{itemsAvailable} claimed
+          <p style="color: black;">0/{itemsAvailable} claimed </p>
         </div>
         <div class="flex flex-col pt-3">
           {#if $userState.solanaExplorerLink}
@@ -176,6 +178,20 @@
           {/if}
         </div>
       </div>
-    </div>
+      
+</div>
+
+  <div class="social">
+
+      <a href="https://twitter.com/SolScoops_NFT">
+        <img src="/twitter.png" class="twitter" alt="twit">
+    </a>
+
+    <a href="https://discord.gg/VbqJVkVh25">
+        <img src="discord.png" class="discord" alt=disc>
+        
+    </a>
+  </div>
+
   {/if}
 </main>

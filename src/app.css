@@ -12,37 +12,61 @@
 
 main {
   text-align: center;
-  padding: 2em;
+  padding: 4em;
   margin: 0 auto;
-  background-color: rgb(255, 161, 253);
-
-}
-.head{
-  background-color: rgb(235, 93, 245);
-
-}
-
-.logoheader{
+  background-image: url("/backg2.jpg");
   
+  background-size: 100% auto;
+}
+
+.p-6{
+  background-color: rgb(250, 220, 122);
+  border-radius: 5px;
+}
+.logoheader{
+
   margin: 0 auto;
   text-align: center;
+  width:25% auto;
   
 }
+.social{
+ 
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ width: auto;
+ height: 5px;
+ margin: 0 auto; 
 
+
+}
+
+.twitter{
+  
+  border-radius: 14px; 
+  margin-right: 77px;
+  width: 70px;
+ 
+}
+.discord{
+  
+  border-radius: 14px;
+  width: 70px;
+}
 .time{
-  background-color: rgb(255, 122, 253);
-  width: 40%;
-  height: 40px;
-  line-height: 40px;
+  background-color: rgb(243, 99, 248);
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
   margin: auto;
   text-align: center;
   position: relative;
   border-radius: 20px;
   vertical-align: middle;
+  
   }
-  .p-6{
-    
-  }
+
 
 .lds-hourglass {
   display: inline-block;
