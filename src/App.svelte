@@ -160,14 +160,14 @@
         
         <div class="time">
           <p style="color: white;">January 16  |  20:00 UTC</p>
-        </div
+        </div>
         
         <div class=" tracking-widest font-bold text-sm pt-3 text-gray-400">
           <!-- {itemsRedeemed} <div class="time">
           <p style="color: white;">January 16  |  20:00 UTC</p>
         </div>-->
 
-          <p style="color: black;">10/{itemsAvailable} claimed </p>
+          <p style="color: black;">15/{itemsAvailable} claimed </p>
         </div>
         <div class="flex flex-col pt-3">
           {#if $userState.solanaExplorerLink}
