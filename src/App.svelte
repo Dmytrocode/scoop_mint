@@ -16,7 +16,7 @@
 
   /***********************************/
   // Customise the app by changing the following variables. TEST
-  const TITLE = "SolScoops";
+  const TITLE = "SolScoops (ROUND 1)";
   const DESCRTIPTION = "Mint 1 of the 800 Unique SolScoops!";
   let HEADER_TITLE = "/logo.png";
   
@@ -158,14 +158,14 @@
           {DESCRTIPTION}
         </div>
         
-<!-- <Button {solana} {connection} />-->
-        <div class="time">
-          <p style="color: white;">January 16  |  20:00 UTC</p>
-        </div>
+        <Button {solana} {connection} />
+        
         <div class=" tracking-widest font-bold text-sm pt-3 text-gray-400">
-          <!-- {itemsRedeemed}-->
+          <!-- {itemsRedeemed} <div class="time">
+          <p style="color: white;">January 16  |  20:00 UTC</p>
+        </div>-->
 
-          <p style="color: black;">0/{itemsAvailable} claimed </p>
+          <p style="color: black;">{itemsRedeemed}/{itemsAvailable} claimed </p>
         </div>
         <div class="flex flex-col pt-3">
           {#if $userState.solanaExplorerLink}
